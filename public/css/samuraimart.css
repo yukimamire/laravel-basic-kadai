@@ -1,5 +1,8 @@
+html {
+  font-size: 14px;
+}
+
 body {
-  background-color: #f8fafc;
   font-family: 'メイリオ', 'Meiryo', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif;
   font-size: 14px;
   font-weight: 500;
@@ -64,6 +67,41 @@ label {
   color: #191919;
 }
 
+a {
+  color: #0fbe9f;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0c997f;
+}
+
+header > nav {
+  padding: 12px 0 !important;
+}
+
+footer {
+  width: 100%;
+  height: 56px;
+  position: absolute;
+  bottom: 0;
+}
+
+a img {
+  transition: 0.3s;
+}
+
+a img:hover {
+  opacity: 0.8;
+}
+
+.samuraimart-wrapper {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 56px;
+  box-sizing: border-box;
+}
+
 .samuraimart-login-input {
   border-radius: 2px;
   border: solid 1px #b2b2b2;
@@ -81,13 +119,13 @@ label {
 }
 
 .samuraimart-require-input-label {
-  border-radius: 1px;
+  border-radius: 2px;
   background-color: #e2001b;
+  padding: 0 6px;
 }
 
 .samuraimart-require-input-label-text {
   font-size: 14px;
-  font-weight: 500;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
@@ -102,30 +140,46 @@ label {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #ffffff;
-  background-color: #0fbe9f;
+  background-color: #0fbe9f !important;
+  border-radius: 2px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  transition: 0.1s;
 }
 
-.samuraimart-login-text {
-  font-size: 14px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #0fbe9f;
+.samuraimart-submit-button:hover {
+  opacity: 0.8;
 }
+
+.samuraimart-submit-button-disabled {
+  border-radius: 2px;
+  font-weight: bold;
+  pointer-events: none;
+  background-color: #e5e5e5;
+  border-color: #e5e5e5;
+  color: #b2b2b2;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
 .samuraimart-header-container {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
 }
 
 .samuraimart-header-search-input {
+  border-radius: 2px;
   border: solid 1px #e5e5e5;
 }
 
 .samuraimart-header-search-button {
-  background-color: #0fbe9f;
+  border-radius: 2px;
+  background-color: #0fbe9f!important;
+  transition: 0.1s;
+}
+
+.samuraimart-header-search-button:hover {
+  opacity: 0.8;
 }
 
 .samuraimart-header-search-icon {
@@ -142,10 +196,241 @@ label {
 
 .samuraimart-favorite-button {
   border-radius: 2px;
-  border: solid 1px #0fbe9f;
+  border: solid 1px #000000 !important;
   background-color: #ffffff;
+  font-weight: bold;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  transition: 0.1s;
+}
+
+.samuraimart-favorite-button:hover {
+  opacity: 0.8;
 }
 
 .text-favorite {
+  color: #000000;
+}
+
+.samuraimart-sidebar-category-label {
+    width: 156px;
+    height: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #191919;
+}
+
+.review-score-color {
   color: #0fbe9f;
+}
+
+.review-score-color:focus {
+  color: #0fbe9f;
+}
+
+.review-score-blank-color {
+  color: #cccccc;
+}
+
+.samuraimart-delete-submit-button {
+  border-radius: 2px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  transition: 0.1s;
+}
+
+.samuraimart-delete-submit-button:hover {
+  opacity: 0.8;
+}
+
+.samuraimart-product-img-detail {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+
+.samuraimart-product-img-recommend {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.samuraimart-product-img-products {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.samuraimart-product-img-cart {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+}
+
+.samuraimart-product-img-cart-history {
+  width: 90%;
+  height: 160px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 767px) {
+  .samuraimart-product-img-detail {
+    margin-bottom: 18px;
+  }
+
+  .samuraimart-product-img-recommend {
+    height: 300px;
+  }
+
+  .samuraimart-product-img-products {
+    height: 300px;
+  }
+
+  .samuraimart-product-img-cart {
+    height: 300px;
+    margin-bottom: 6px;
+  }
+
+  .samuraimart-product-img-cart-history {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 12px;
+  }
+
+  .samuraimart-vertical-bar {
+    display: none;
+  }
+}
+
+.page-item:first-child > .page-link,
+.page-item:last-child > .page-link {
+  border-radius: 2px;
+  background-color: #0fbe9f;
+  border-color: #0fbe9f;
+  color: #ffffff;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  transition: 0.1s;
+}
+
+.page-item:first-child>.page-link:hover,
+.page-item:last-child>.page-link:hover {
+  opacity: 0.8;
+}
+
+.page-item:first-child.disabled > .page-link,
+.page-item:last-child.disabled >.page-link {
+  background-color: #e5e5e5;
+  border-color: #e5e5e5;
+  color: #b2b2b2;
+}
+
+.page-item {
+  margin: 0 3px;
+}
+
+.page-item.active > .page-link {
+  background-color: #e5e5e5;
+  border-color: #e5e5e5;
+  color: #b2b2b2 !important;
+}
+
+.page-item:first-child {
+  margin: 0 3px 0 0;
+}
+
+.page-item:last-child {
+  margin: 0 0 0 3px;
+}
+
+.page-link {
+  border-radius: 2px;
+  color: #0fbe9f;
+}
+
+.page-link:hover {
+  color: #0c997f;
+}
+
+.page-link:focus {
+  color: #0c997f;
+}
+
+.active > .page-link {
+  background-color: #0fbe9f;
+  border-color: #0fbe9f;
+}
+
+.active > .page-link:hover {
+  color: #ffffff;
+}
+
+.pagination > .page-item:not(:first-child).page-item:not(:last-child).disabled > .page-link {
+  background-color: transparent;
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.samuraimart-form-parts {
+  border-radius: 2px;
+}
+
+.samuraimart-mypage-link:hover {
+  transition: 0.3s;
+}
+
+.samuraimart-mypage-link:hover {
+  background-color: #f8f9fa;
+}
+
+/* 評価 */
+
+.stars {
+  position: relative;
+  display: inline-block;
+  font-size: 20px; /* 星のサイズ */
+  color: #ccc; /* 背景の星の色（グレー） */
+  line-height: 1;
+}
+
+.stars::before {
+  content: '★★★★★'; /* 5つの星を表示 */
+  display: inline-block;
+}
+
+/* 評価による星の色（ゴールド） */
+.stars::after {
+  content: '★★★★★'; /* 5つの星を表示 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0; /* デフォルトで幅は0 */
+  color: #f5c518; /* ゴールド色 */
+  overflow: hidden;
+  display: inline-block;
+}
+
+/* 評価値に応じて幅を設定 */
+.stars[data-rating="5"]::after { width: 100%; }
+.stars[data-rating="4.5"]::after { width: 90%; }
+.stars[data-rating="4"]::after { width: 80%; }
+.stars[data-rating="3.5"]::after { width: 70%; }
+.stars[data-rating="3"]::after { width: 60%; }
+.stars[data-rating="2.5"]::after { width: 50%; }
+.stars[data-rating="2"]::after { width: 40%; }
+.stars[data-rating="1.5"]::after { width: 30%; }
+.stars[data-rating="1"]::after { width: 20%; }
+.stars[data-rating="0.5"]::after { width: 10%; }
+.stars[data-rating="0"]::after { width: 0%; }
+
+/* 評価値のテキスト部分 */
+.rating-text {
+  font-size: 12px;
+  color: #333;
+  margin-left: 8px;
 }
