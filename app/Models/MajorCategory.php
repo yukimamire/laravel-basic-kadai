@@ -11,6 +11,6 @@ class MajorCategory extends Model
 
     public function categories()
     {
-        return $this->hasMany(category::class);
+        return $this->hasMany(Category::class);
     }
 }
